@@ -1,4 +1,4 @@
-import { styled } from "app/stitches.config";
+import { styled } from "stitches.config";
 
 const VisuallyHidden = styled('span', {
   position: 'absolute',

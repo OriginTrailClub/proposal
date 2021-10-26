@@ -1,4 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
+
+import Proposal from 'content/proposal.mdx'
+import MDXContent from 'components/MDXContent';
 
 export default function Home() {
   return (
@@ -9,7 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        Hello world!
+        <MDXContent>
+          <Proposal />
+        </MDXContent>
       </main>
     </div>
   )

@@ -1,3 +1,5 @@
+import { SSRProvider } from "@react-aria/ssr"
+
 import { globalCss } from 'stitches.config';
 
 const globalStyles = globalCss({
@@ -27,7 +29,7 @@ const globalStyles = globalCss({
 function MyApp({ Component, pageProps }) {
   globalStyles();
 
-  return <Component {...pageProps} />
+  return <SSRProvider><Component {...pageProps} /></SSRProvider>
 }
 
 export default MyApp

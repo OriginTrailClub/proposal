@@ -1,21 +1,22 @@
 import Head from 'next/head';
 
 import Proposal from 'content/proposal.mdx'
+import ProposalLayout from 'layouts/ProposalLayout';
 import MDXContent from 'components/MDXContent';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Community Hub proposal</title>
         <meta name="description" content="..." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <ProposalLayout>
         <MDXContent>
           <Proposal />
         </MDXContent>
-      </main>
-    </div>
+      </ProposalLayout>
+    </>
   )
 }

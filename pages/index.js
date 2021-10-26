@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Proposal from 'content/proposal.mdx'
+import Proposal from 'content/proposal/index.mdx'
 import ProposalLayout from 'layouts/ProposalLayout';
 import MDXContent from 'components/MDXContent';
 

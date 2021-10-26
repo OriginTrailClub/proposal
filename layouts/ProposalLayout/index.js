@@ -31,10 +31,10 @@ const ProposalLayoutHeader = styled("div", {
 const ProposalLayoutContent = styled("div", {
   girdArea: "content",
   width: "100%",
-  // maxWidth: 1234,
   height: "100%",
   display: "flex",
   flexDirection: "column",
+  alignItems: "center",
 });
 
 const ProposalLayoutFooter = styled("div", {

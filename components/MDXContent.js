@@ -59,7 +59,8 @@ const MDXContentContainer = styled("section", {
     "content sidenav"
   `,
   gridTemplateColumns: "minmax(auto, 720px)",
-  gap: "$large",
+  gridGap: "$large",
+  maxWidth: 1234,
 });
 
 const MDXContentSideNav = styled("aside", {

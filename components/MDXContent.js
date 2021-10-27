@@ -18,54 +18,79 @@ const H1 = styled("h1", {
 
 const H2 = styled("h2", {
   textStyle: "$header-2",
-  mb: "$regular",
-  mt: "$large",
+  mb: "$small",
+  mt: "$regular",
+
+  "@bp1": {
+    mb: "$regular",
+    mt: "$large",
+  },
 });
 
 const H3 = styled("h3", {
   textStyle: "$header-3",
-  mb: "$regular",
-  mt: "$large",
+  mb: "$small",
+  mt: "$regular",
+
+  "@bp1": {
+    mb: "$regular",
+    mt: "$large",
+  },
 });
 
 const H4 = styled("h4", {
   textStyle: "$header-4",
-  mb: "$regular",
-  mt: "$large",
+  mb: "$small",
+  mt: "$regular",
+
+  "@bp1": {
+    mb: "$regular",
+    mt: "$large",
+  },
 });
 
 const P = styled("p", {
   textStyle: "$body",
-  mb: "$large",
+
+  mb: "$regular",
   mt: "$none",
+
+  "@bp1": {
+    mb: "$large",
+  },
 });
 
 const Strong = styled("strong", {
   fontWeight: "$semi-bold",
 });
 
-const Em = styled('em', {
-  fontStyle: 'italic',
+const Em = styled("em", {
+  fontStyle: "italic",
 });
 
-const UnorderedList = styled('ul', {
-  padding: 0,
-  margin: 0,
-  listStyle: 'none',
-})
+const UnorderedList = styled("ul", {
+  listStyle: "none",
+  mb: "$regular",
+  mt: "$none",
+  p: 0,
 
-const ListItem = styled('li', {
+  "@bp1": {
+    mb: "$large",
+  },
+});
+
+const ListItem = styled("li", {
   textStyle: "$body",
-  display: 'flex',
-})
+  display: "flex",
+});
 
-const ListStyleDisc = styled('span', {
-  mr: '$small'
-})
+const ListStyleDisc = styled("span", {
+  mr: "$small",
+});
 
 const Block = styled("div", {
   mb: "$large",
-  mt: "$none",
+  mt: "$large",
 });
 
 const slugify = (str) =>
@@ -81,29 +106,30 @@ const MDXContentContainer = styled("section", {
     "title"
     "content"
   `,
-  gridGap: "$large",
+  gridGap: "$regular",
   maxWidth: 1234,
 
-  '@bp3': {
+  "@bp3": {
+    gridGap: "$large",
     gridTemplateAreas: `
       "title ."
       "content sidenav"
     `,
     gridTemplateColumns: "minmax(auto, 720px)",
-  }
+  },
 });
 
 const MDXContentSideNav = styled("aside", {
-  display: 'none',
+  display: "none",
   gridArea: "sidenav",
   flexGrow: 0,
   flexShrink: 1,
   width: "100%",
   order: 1,
 
-  '@bp3': {
-    display: 'block'
-  }
+  "@bp3": {
+    display: "block",
+  },
 });
 
 const MDXContentSideNavSticky = styled("div", {
@@ -113,7 +139,7 @@ const MDXContentSideNavSticky = styled("div", {
 
 const MDXContentWrapper = styled("article", {
   gridArea: "content",
-  overflow: 'hidden'
+  overflow: "hidden",
 });
 
 const MDXContentTitle = styled("h1", {
@@ -194,28 +220,22 @@ const components = {
     return <P>{children}</P>;
   },
   strong: ({ children }) => {
-    return (<Strong>{children}</Strong>)
+    return <Strong>{children}</Strong>;
   },
   em: ({ children }) => {
-    return (<Em>{children}</Em>)
+    return <Em>{children}</Em>;
   },
   ul: ({ children }) => {
-    return (
-      <UnorderedList>
-        {children}
-      </UnorderedList>
-    )
+    return <UnorderedList>{children}</UnorderedList>;
   },
   li: ({ children }) => {
     return (
       <ListItem>
-        <ListStyleDisc>
-          &#8226;
-        </ListStyleDisc>
+        <ListStyleDisc>&#8226;</ListStyleDisc>
         {children}
       </ListItem>
-    )
-  }
+    );
+  },
 };
 
 function Provider({ children }) {

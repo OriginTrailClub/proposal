@@ -65,12 +65,15 @@ const MDXContentContainer = styled("section", {
 
 const MDXContentSideNav = styled("aside", {
   gridArea: "sidenav",
-  position: "sticky",
-  top: 20,
   flexGrow: 0,
   flexShrink: 1,
   width: "100%",
   order: 1,
+});
+
+const MDXContentSideNavSticky = styled("div", {
+  position: "sticky",
+  top: 20,
 });
 
 const MDXContentWrapper = styled("article", {
@@ -119,15 +122,17 @@ function Wrapper(props) {
         })}
       </MDXContentWrapper>
       <MDXContentSideNav>
-        <SideNav title="On this page">
-          {headings.map((heading) => (
-            <SideNav.Item
-              key={heading}
-              href={`#${slugify(heading)}`}
-              label={heading}
-            />
-          ))}
-        </SideNav>
+        <MDXContentSideNavSticky>
+          <SideNav title="On this page">
+            {headings.map((heading) => (
+              <SideNav.Item
+                key={heading}
+                href={`#${slugify(heading)}`}
+                label={heading}
+              />
+            ))}
+          </SideNav>
+        </MDXContentSideNavSticky>
       </MDXContentSideNav>
     </MDXContentContainer>
   );

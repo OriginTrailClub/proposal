@@ -25,6 +25,12 @@ import amosThomasAvatar from 'static/images/avatars/amos-thomas@3x.jpg'
 import luKuAvatar from 'static/images/avatars/lu-ku@3x.jpg'
 import illustratorAvatar from 'static/images/avatars/illustrator@3x.jpg'
 
+import bscQR from 'static/images/qr-codes/bsc-safe-qr.jpg'
+import ethQR from 'static/images/qr-codes/Ethereum-safe-qr.jpg'
+import polygonQR from 'static/images/qr-codes/polygon-safe-qr.jpg'
+import xDaiQR from 'static/images/qr-codes/xdai-safe-qr.jpg'
+
+
 # Community Hub Proposal
 
 This proposal describes our vision and mission for the OriginTrail community and provides a detailed description of how we intend to kickstart a thriving OriginTrail community.
@@ -241,7 +247,7 @@ Intiallity, the multi-sign wallets will be managed by members from the Project O
               alt="Eth address avatar"
             />
           }
-          label="0xDE922151161eCA1344320C576B98731d3e488A01"
+          label="0x0f411440e973e6D7E7D629511975E244eA3F1532"
         />
       </Table.Cell>
     </Table.Row>
@@ -271,7 +277,7 @@ Intiallity, the multi-sign wallets will be managed by members from the Project O
               alt="Eth address avatar"
             />
           }
-          label="0xDE922151161eCA1344320C576B98731d3e488A01"
+          label="0x9fc1fbA0f5D8fe9A1C40F8e12A602D19AAeA08C1"
         />
       </Table.Cell>
     </Table.Row>
@@ -286,7 +292,7 @@ Intiallity, the multi-sign wallets will be managed by members from the Project O
               alt="Eth address avatar"
             />
           }
-          label="0xDE922151161eCA1344320C576B98731d3e488A01"
+          label="0xEC9bb24e03ba3aC582376b6140542090cc63859F"
         />
       </Table.Cell>
     </Table.Row>
@@ -304,7 +310,7 @@ You can donate to the community proposal fund on the Ethereum, Polygon, xDai or 
 <Tabs>
   <Tabs.List>
     <Tabs.Item key="ETH">Ethereum</Tabs.Item>
-    <Tabs.Item label="Polygon" key="Matic">
+    <Tabs.Item label="Polygon" key="Polygon">
       Polygon
     </Tabs.Item>
     <Tabs.Item label="xDai" key="xDai">
@@ -317,13 +323,15 @@ You can donate to the community proposal fund on the Ethereum, Polygon, xDai or 
   <Tabs.Panels>
     <Tabs.Panel key="ETH">
       <Donation
+        qr={ethQR}
         title="Community Proposal Fund"
         description="Deposit funds by scanning the QR code or copying the address below. Only send Ether and assets to this address (e.g. ETH, ERC20, ERC721)"
         address="0xD69B2B7ef81e63177e5B8fA6705895CA88d17AfA"
       />
     </Tabs.Panel>
-    <Tabs.Panel key="Matic">
+    <Tabs.Panel key="Polygon">
       <Donation
+        qr={polygonQR}
         title="Community Proposal Fund"
         description="Deposit funds by scanning the QR code or copying the address below. Only send Matic and assets to this address (e.g. ETH, ERC20, ERC721)"
         address="0x4ACC8D6FB978DB8F975e36e0614988D75bc54bF7"
@@ -331,6 +339,7 @@ You can donate to the community proposal fund on the Ethereum, Polygon, xDai or 
     </Tabs.Panel>
     <Tabs.Panel key="xDai">
       <Donation
+        qr={xDaiQR}
         title="Community Proposal Fund"
         description="Deposit funds by scanning the QR code or copying the address below. Only send xDai and assets to this address (e.g. ETH, ERC20, ERC721)"
         address="0x9aE31f6f26b15622d66755c5C794f7daD16fd48F"
@@ -338,6 +347,7 @@ You can donate to the community proposal fund on the Ethereum, Polygon, xDai or 
     </Tabs.Panel>
     <Tabs.Panel key="BSC">
       <Donation
+        qr={bscQR}
         title="Community Proposal Fund"
         description="Deposit funds by scanning the QR code or copying the address below. Only send Binance Coin and assets to this address (e.g. ETH, ERC20, ERC721)"
         address="0x92BDCA6c068b227BD989E475C95E0eCfa98Ddb3d"

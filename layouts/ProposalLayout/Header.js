@@ -14,6 +14,7 @@ const HeaderContent = styled("div", {
   maxHeight: 48,
   width: "100%",
   justifyContent: "space-between",
+  alignItems: "center",
 })
 
 const HeaderLogo = styled("div", {

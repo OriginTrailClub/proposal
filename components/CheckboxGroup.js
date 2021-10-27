@@ -36,7 +36,7 @@ const CheckboxBox = styled("div", {
   boxShadow: "inset 0 0 0 1px $colors$indigo-600",
   alignItems: "center",
   justifyContent: "center",
-  my: "$small",
+  my: "$x-small",
   mr: "$small",
 
   "&:first-child": {
@@ -48,6 +48,10 @@ const CheckboxBox = styled("div", {
 
   " > svg": {
     opacity: 0,
+  },
+
+  '@bp1': {
+    my: "$small",
   },
 
   variants: {

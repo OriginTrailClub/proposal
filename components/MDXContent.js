@@ -40,6 +40,29 @@ const P = styled("p", {
   mt: "$none",
 });
 
+const Strong = styled("strong", {
+  fontWeight: "$semi-bold",
+});
+
+const Em = styled('em', {
+  fontStyle: 'italic',
+});
+
+const UnorderedList = styled('ul', {
+  padding: 0,
+  margin: 0,
+  listStyle: 'none',
+})
+
+const ListItem = styled('li', {
+  textStyle: "$body",
+  display: 'flex',
+})
+
+const ListStyleDisc = styled('span', {
+  mr: '$small'
+})
+
 const Block = styled("div", {
   mb: "$large",
   mt: "$none",
@@ -157,6 +180,29 @@ const components = {
   p: ({ children }) => {
     return <P>{children}</P>;
   },
+  strong: ({ children }) => {
+    return (<Strong>{children}</Strong>)
+  },
+  em: ({ children }) => {
+    return (<Em>{children}</Em>)
+  },
+  ul: ({ children }) => {
+    return (
+      <UnorderedList>
+        {children}
+      </UnorderedList>
+    )
+  },
+  li: ({ children }) => {
+    return (
+      <ListItem>
+        <ListStyleDisc>
+          &#8226;
+        </ListStyleDisc>
+        {children}
+      </ListItem>
+    )
+  }
 };
 
 function Provider({ children }) {

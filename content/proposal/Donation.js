@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Image from 'next/image'
+
 import { styled } from 'stitches.config';
 
 import Button from 'components/Button';
@@ -56,16 +58,16 @@ const DonationAdressInfo = styled('div', {
   gap: '$small'
 })
 
-const DonationAdressCallToAction = styled('div', {
-
-});
-
-const DonationQR = styled('img', {
-  display: 'flex',
-  width: 96,
-  height: 96,
+const DonationQRWrapper = styled('div', {
+  display: 'block',
+  maxWidth: 96,
+  maxHeight: 96,
+  width: '100%',
   flexShrink: 0,
   flexGrow: 0,
+})
+
+const DonationQR = styled(Image, {
 });
 
 const useCopyToClipboard = (text, notifyTimeout = 1000) => {
@@ -123,15 +125,17 @@ function Donation({ title, description, address, qr }) {
               {address}
             </DonationAddressHash>
           </DonationAdressInfo>
-          <DonationAdressCallToAction>
+          <div>
             <Tooltip.Trigger isOpen={status === 'copied' || status === 'failed' ? true : undefined}>
               <Button variant="secondary" Icon={ClipboardLineIcon} onPress={onCopy} label="Copy to clipboard" hideLabel />
               <Tooltip label={tooltipLabel} />
             </Tooltip.Trigger>
-          </DonationAdressCallToAction>
+          </div>
         </DonationAddress>
       </DonationMeta>
-      <DonationQR img="#todo" alt="todo" />
+      <DonationQRWrapper>
+        <Image src={qr} alt={title} layout='fill'  />
+      </DonationQRWrapper>
     </DonationContainer>
   )
 }

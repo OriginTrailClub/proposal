@@ -56,6 +56,7 @@ const TooltipContent = styled('span', {
   display: 'flex',
   textStyle: '$body-compact',
   color: 'white',
+  fontWeight: "$semi-bold",
 })
 
 const TooltipTip = styled('span', {

@@ -1,11 +1,15 @@
-import { SSRProvider } from "@react-aria/ssr"
+import { SSRProvider } from "@react-aria/ssr";
 
-import { globalCss } from 'stitches.config';
+import { globalCss } from "stitches.config";
 
 const globalStyles = globalCss({
   html: {
     height: "100%",
     width: "100%",
+
+    "@bp1": {
+      fontSize: "20px",
+    }
   },
   body: {
     margin: 0,
@@ -24,12 +28,16 @@ const globalStyles = globalCss({
     boxSizing: "border-box",
     position: "relative",
   },
-})
+});
 
 function MyApp({ Component, pageProps }) {
   globalStyles();
 
-  return <SSRProvider><Component {...pageProps} /></SSRProvider>
+  return (
+    <SSRProvider>
+      <Component {...pageProps} />
+    </SSRProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -28,6 +28,7 @@ const FooterOriginTrailCommunityInfoContainer = styled("div", {
 const FooterOriginTrailCommunityInfoContent = styled("p", {
   textStyle: "$body-secondary",
   color: "$text-subtle",
+  my: "$regular"
 });
 
 const FooterOriginTrailCommunityInfoLogo = styled("div", {
@@ -98,6 +99,10 @@ const FooterOriginTrailCommunityList = styled("ul", {
   display: "flex",
   listStyle: "none",
   alignItems: "flex-end",
+  m: 0,
+  px: 0,
+  pt: '$small',
+  pb: '$regular',
 });
 
 const FooterOriginTrailCommunityListItem = styled('li', {
@@ -163,13 +168,20 @@ const FooterOriginTrailCommunityContainer = styled("aside", {
   display: "flex",
   justifyContent: "center",
   width: "100%",
+  px: "$regular"
 });
 
 const FooterOriginTrailCommunityContent = styled("div", {
   display: "flex",
   justifyContent: "space-between",
+  flexDirection: 'column',
   width: "100%",
   maxWidth: 1234,
+
+  '@bp1': {
+    flexDirection: 'row',
+    alignItems: "flex-end",
+  }
 });
 
 function FooterOriginTrailCommunity() {
@@ -186,7 +198,7 @@ function FooterOriginTrailCommunity() {
 const FooterProjectContainer = styled("footer", {
   display: "flex",
 
-  py: "$regular",
+  p: "$regular",
 
   borderWidth: 0,
   borderTopWidth: 1,
@@ -200,17 +212,15 @@ const FooterProjectContainer = styled("footer", {
 
 const FooterProjectContent = styled("div", {
   display: "flex",
-  flexDirection: "row",
-  justifyContent: "space-between",
 
   maxWidth: 1234,
   width: "100%",
+
+  '@bp1': {
+    justifyContent: "flex-end",
+  }
 });
 
-const FooterProjectCopyright = styled("div", {
-  textStyle: "$body-compact",
-  color: "$text-subtle",
-});
 
 const FooterProjectCommunity = styled("div", {
   textStyle: "$body-compact",
@@ -270,9 +280,6 @@ function FooterProject() {
   return (
     <FooterProjectContainer>
       <FooterProjectContent>
-        <FooterProjectCopyright>
-          © 2013 - 2021 | OriginTrail
-        </FooterProjectCopyright>
         <FooterProjectCommunity>
           Made with&nbsp;
           <FooterProjectCommunityLove />

@@ -21,11 +21,15 @@ const HeaderLogo = styled("div", {
   display: "flex",
   alignItems: "stretch",
   flexGrow: 0,
-  flexShrink: 0,
+  flexShrink: 1,
   width: "100%",
   maxWidth: 190,
   height: 32,
   justifyContent: "stretch",
+})
+
+const HeaderCta = styled('div', {
+  flexShrink: 0,
 })
 
 function Header({ CallToAction }) {
@@ -36,7 +40,7 @@ function Header({ CallToAction }) {
           <Logo />
         </HeaderLogo>
 
-        <div>{CallToAction}</div>
+        <HeaderCta>{CallToAction}</HeaderCta>
       </HeaderContent>
     </HeaderContainer>
   )

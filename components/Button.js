@@ -34,45 +34,50 @@ const ButtonContainer = styled("button", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+
+  borderWidth: 1,
+  borderStyle: 'solid',
+  borderColor: 'transparent',
+
   variants: {
     variant: {
       primary: {
         color: "white",
         backgroundColor: "$indigo-600",
-        boxShadow: "0 0 0 1px $colors$indigo-300",
+        borderColor: "$indigo-300",
         "&:hover": {
           backgroundColor: "$indigo-500",
-          boxShadow: "0 0 0 1px $colors$indigo-100",
+          borderColor: "$indigo-100",
         },
         "&:active": {
           backgroundColor: "$indigo-700",
-          boxShadow: "0 0 0 1px $colors$indigo-100",
+          borderColor: "$indigo-100",
         },
       },
       secondary: {
-        color: "$colors$indigo-600",
+        color: "$indigo-600",
         backgroundColor: "transparent",
-        boxShadow: "0 0 0 1px $colors$indigo-200",
+        borderColor: "$indigo-200",
         "&:hover": {
           backgroundColor: "$indigo-50",
-          boxShadow: "0 0 0 1px $colors$indigo-100",
+          borderColor: "$indigo-100",
         },
         "&:active": {
           backgroundColor: "$indigo-100",
-          boxShadow: "0 0 0 1px $colors$indigo-100",
+          borderColor: "$indigo-100",
         },
       },
       tertiary: {
-        color: "$colors$indigo-600",
+        color: "$indigo-600",
         backgroundColor: "transparent",
-        boxShadow: "0 0 0 1px transparent",
+        borderColor: "0 0 0 1px transparent",
         "&:hover": {
           backgroundColor: "$indigo-50",
-          boxShadow: "0 0 0 1px $colors$indigo-100",
+          borderColor: "$indigo-100",
         },
         "&:active": {
           backgroundColor: "$indigo-100",
-          boxShadow: "0 0 0 1px $colors$indigo-100",
+          borderColor: "$indigo-100",
         },
       },
     },

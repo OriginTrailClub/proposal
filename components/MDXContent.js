@@ -78,20 +78,32 @@ const slugify = (str) =>
 const MDXContentContainer = styled("section", {
   display: "grid",
   gridTemplateAreas: `
-    "title ."
-    "content sidenav"
+    "title"
+    "content"
   `,
-  gridTemplateColumns: "minmax(auto, 720px)",
   gridGap: "$large",
   maxWidth: 1234,
+
+  '@bp3': {
+    gridTemplateAreas: `
+      "title ."
+      "content sidenav"
+    `,
+    gridTemplateColumns: "minmax(auto, 720px)",
+  }
 });
 
 const MDXContentSideNav = styled("aside", {
+  display: 'none',
   gridArea: "sidenav",
   flexGrow: 0,
   flexShrink: 1,
   width: "100%",
   order: 1,
+
+  '@bp3': {
+    display: 'block'
+  }
 });
 
 const MDXContentSideNavSticky = styled("div", {

@@ -26,6 +26,7 @@ const ProposalLayoutHeader = styled("div", {
   girdArea: "header",
   width: "100%",
   justifyContent: "center",
+  px: "$regular"
 });
 
 const ProposalLayoutContent = styled("div", {
@@ -35,6 +36,7 @@ const ProposalLayoutContent = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  px: "$regular"
 });
 
 const ProposalLayoutFooter = styled("div", {

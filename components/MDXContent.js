@@ -113,6 +113,7 @@ const MDXContentSideNavSticky = styled("div", {
 
 const MDXContentWrapper = styled("article", {
   gridArea: "content",
+  overflowX: 'hidden',
 });
 
 const MDXContentTitle = styled("h1", {

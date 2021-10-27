@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import Image from 'next/image'
-
 import { styled } from 'stitches.config';
 
 import Button from 'components/Button';
@@ -73,6 +71,10 @@ const DonationQRWrapper = styled('div', {
   flexGrow: 0,
   display: 'none',
 
+  ' > *': {
+    width: '100%',
+  },
+
   '@bp1': {
     display: 'block',
   }
@@ -142,7 +144,7 @@ function Donation({ title, description, address, qr }) {
         </DonationAddress>
       </DonationMeta>
       <DonationQRWrapper>
-        <Image src={qr} alt={title} layout='fill'  />
+        <img src={qr} alt={title} layout='fill'  />
       </DonationQRWrapper>
     </DonationContainer>
   )

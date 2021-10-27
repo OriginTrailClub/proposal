@@ -1,10 +1,8 @@
-import Image from 'next/image'
-
 import { filterDOMProps } from '@react-aria/utils';
 
 import { styled } from 'stitches.config';
 
-const AvatarImage = styled(Image, {
+const AvatarImage = styled('img', {
   backgroundColor: '$gray-200',
   border: 'none',
   borderRadius: 9999,

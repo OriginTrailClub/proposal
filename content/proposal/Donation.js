@@ -38,24 +38,30 @@ const DonationDescription = styled('div', {
 
 const DonationAddress = styled('div', {
   display: 'flex',
-  gap: '$small',
-  alignItems: 'center',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
   justifyContent: 'space-between',
 });
 
 const DonationAdressTitle = styled('h4', {
   margin: 0,
   textStyle: '$header-4',
+  mb: '$small',
 });
 
 const DonationAddressHash = styled('span', {
-  textStyle: '$table-cell'
+  textStyle: '$table-cell',
 });
 
 const DonationAdressInfo = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  gap: '$small'
+  mb: '$regular',
+
+  '@bp1': {
+    mb: '$regular',
+    mr: '$small',
+  }
 })
 
 const DonationQRWrapper = styled('div', {
@@ -65,9 +71,11 @@ const DonationQRWrapper = styled('div', {
   width: '100%',
   flexShrink: 0,
   flexGrow: 0,
-})
+  display: 'none',
 
-const DonationQR = styled(Image, {
+  '@bp1': {
+    display: 'block',
+  }
 });
 
 const useCopyToClipboard = (text, notifyTimeout = 1000) => {

@@ -62,8 +62,8 @@ function ProgressBar({ label, value, minValue = 0, maxValue, description }) {
   const formatOptions = {
     style: "currency",
     currency: "USD",
-    currencyDisplay: "narrowSymbol"
-}
+    currencyDisplay: "symbol",
+  }
 
   const descriptionId = description != null ? `description-${id}` : undefined
 
@@ -86,7 +86,7 @@ function ProgressBar({ label, value, minValue = 0, maxValue, description }) {
     <ProgressBarContainer>
       <ProgressBarInfo>
         <ProgressBarLabel {...labelProps}>{label}</ProgressBarLabel>
-        <ProgressBarMaxValue>{formatter.format(maxValue)}</ProgressBarMaxValue>
+        <ProgressBarMaxValue>{String(formatter.format(maxValue)).replace('US', '')}</ProgressBarMaxValue>
       </ProgressBarInfo>
       <ProgressBarTrack {...progressBarProps}>
         <ProgressBarFill>

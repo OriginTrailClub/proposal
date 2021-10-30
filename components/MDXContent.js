@@ -6,93 +6,6 @@ import { styled } from "stitches.config";
 
 import { MDXProvider } from "@mdx-js/react";
 
-const H1 = styled("h1", {
-  textStyle: "$header-1",
-
-  my: "$large",
-
-  "&:first-of-type": {
-    mt: "$none",
-  },
-});
-
-const H2 = styled("h2", {
-  textStyle: "$header-2",
-  mb: "$small",
-  mt: "$regular",
-
-  "@bp1": {
-    mb: "$regular",
-    mt: "$large",
-  },
-});
-
-const H3 = styled("h3", {
-  textStyle: "$header-3",
-  mb: "$small",
-  mt: "$regular",
-
-  "@bp1": {
-    mb: "$regular",
-    mt: "$large",
-  },
-});
-
-const H4 = styled("h4", {
-  textStyle: "$header-4",
-  mb: "$small",
-  mt: "$regular",
-
-  "@bp1": {
-    mb: "$regular",
-    mt: "$large",
-  },
-});
-
-const P = styled("p", {
-  textStyle: "$body",
-
-  mb: "$regular",
-  mt: "$none",
-
-  "@bp1": {
-    mb: "$large",
-  },
-});
-
-const Strong = styled("strong", {
-  fontWeight: "$semi-bold",
-});
-
-const Em = styled("em", {
-  fontStyle: "italic",
-});
-
-const UnorderedList = styled("ul", {
-  listStyle: "none",
-  mb: "$regular",
-  mt: "$none",
-  p: 0,
-
-  "@bp1": {
-    mb: "$large",
-  },
-});
-
-const ListItem = styled("li", {
-  textStyle: "$body",
-  display: "flex",
-});
-
-const ListStyleDisc = styled("span", {
-  mr: "$small",
-});
-
-const Block = styled("div", {
-  mb: "$large",
-  mt: "$large",
-});
-
 const slugify = (str) =>
   str
     .toLowerCase()
@@ -148,6 +61,19 @@ const MDXContentTitle = styled("h1", {
   margin: 0,
 });
 
+const MDXContentContext = React.createContext();
+
+function ContentLinkActiveProvider({ children }) {
+  const [elements, setElements] = React.useState([]);
+
+
+  return (
+    <MDXContentContext.Provider>
+      {children}
+    </MDXContentContext.Provider>
+  )
+}
+
 function Wrapper(props) {
   let { title, headings, children } = React.useMemo(() => {
     let children = React.Children.toArray(props.children);
@@ -199,6 +125,103 @@ function Wrapper(props) {
     </MDXContentContainer>
   );
 }
+
+const H1 = styled("h1", {
+  textStyle: "$header-1",
+
+  my: "calc($regular / calc(20 / 17))",
+
+  "&:first-of-type": {
+    my: "$large",
+    mt: "$none",
+  },
+});
+
+const H2 = styled("h2", {
+  textStyle: "$header-2",
+  mb: "calc($regular / calc(20 / 17))",
+  mt: "calc($large / calc(20 / 17))",
+
+  "@bp1": {
+    mb: "$regular",
+    mt: "$large",
+  },
+});
+
+const H3 = styled("h3", {
+  textStyle: "$header-3",
+  mb: "calc($regular / calc(20 / 17))",
+  mt: "calc($large / calc(20 / 17))",
+
+  "@bp1": {
+    mb: "$regular",
+    mt: "$large",
+  },
+});
+
+const H4 = styled("h4", {
+  textStyle: "$header-4",
+  mb: "calc($regular / calc(20 / 17))",
+  mt: "calc($large / calc(20 / 17))",
+
+  "@bp1": {
+    mb: "$regular",
+    mt: "$large",
+  },
+});
+
+const P = styled("p", {
+  textStyle: "$body",
+
+  mb: "calc($large / calc(20 / 17))",
+  mt: "$none",
+
+  '&:first-child': {
+    textStyle: "$body-intro",
+  },
+
+  "@bp1": {
+    mb: "$large",
+  },
+});
+
+const Strong = styled("strong", {
+  fontWeight: "$semi-bold",
+});
+
+const Em = styled("em", {
+  fontStyle: "italic",
+});
+
+const UnorderedList = styled("ul", {
+  listStyle: "none",
+  mb: "calc($large / calc(20 / 17))",
+  mt: "$none",
+  p: 0,
+
+  "@bp1": {
+    mb: "$large",
+  },
+});
+
+const ListItem = styled("li", {
+  textStyle: "$body",
+  display: "flex",
+});
+
+const ListStyleDisc = styled("span", {
+  mr: "$small",
+});
+
+const Block = styled("div", {
+  mb: "calc($large / calc(20 / 17))",
+  mt: "calc($large / calc(20 / 17))",
+
+  '@bp1': {
+    mb: "$large",
+    mt: "$large",
+  }
+});
 
 const components = {
   wrapper: (props) => {

@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
       <ProposalLayoutContainer>
         <ProposalLayoutHeader>
           <Header
-            CallToAction={<Button label="Ape in" as="a" href="#donate" Icon={BankFillIcon} />}
+            CallToAction={<Button label="Donate" as="a" href="#donate" Icon={BankFillIcon} />}
           />
         </ProposalLayoutHeader>
 

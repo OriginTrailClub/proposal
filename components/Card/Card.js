@@ -188,6 +188,7 @@ const CardHeader = styled("div", {
 const CardUserInfo = styled("div", {
   display: "flex",
   flexDirection: "column",
+  justifyContent: 'center',
   ml: "$regular",
 });
 

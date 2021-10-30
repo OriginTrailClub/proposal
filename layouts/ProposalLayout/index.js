@@ -18,7 +18,11 @@ const ProposalLayoutContainer = styled("div", {
   gridTemplateColumns: "1fr",
   width: "100%",
   height: "100%",
-  gap: "$x-large",
+  gap: "$large",  
+
+  '@bp1': {
+    gap: "$x-large",
+  }
 });
 
 const ProposalLayoutHeader = styled("div", {

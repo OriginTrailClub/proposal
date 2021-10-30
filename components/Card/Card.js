@@ -27,7 +27,6 @@ const CardContainer = styled("article", {
 });
 
 function CardAvatar(props) {
-  console.log('CardAvatar', props)
   return <Avatar {...props} />;
 }
 

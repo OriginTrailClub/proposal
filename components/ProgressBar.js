@@ -1,31 +1,32 @@
-import { useMeter } from "@react-aria/meter"
+import { useProgressBar } from "@react-aria/progress"
 import { useId } from "@react-aria/utils"
 import { useNumberFormatter } from "@react-aria/i18n"
 
 import { styled } from "stitches.config"
 
-const MeterInfo = styled("div", {
+const ProgressBarInfo = styled("div", {
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
 })
 
-const MeterContainer = styled("div", {
+const ProgressBarContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
 })
 
-const MeterProgressBar = styled("div", {
+const ProgressBarTrack = styled("div", {
   p: "$x-small",
   display: "flex",
 })
 
-const MeterProgressBarFill = styled("div", {
+const ProgressBarFill = styled("div", {
   height: 16,
   width: "100%",
+  display: 'flex',
 })
 
-const MeterProgressBarSvg = styled("svg", {
+const ProgressBarSvgFill = styled("svg", {
   width: "100%",
   height: "100%",
   borderRadius: 1,
@@ -35,24 +36,24 @@ const MeterProgressBarSvg = styled("svg", {
   `,
 })
 
-const MeterLabel = styled("span", {
+const ProgressBarLabel = styled("span", {
   textStyle: "$table-head",
   color: "$text-heading",
   mb: "$x-small",
 })
 
-const MeterDescription = styled("div", {
+const ProgressBarDescription = styled("div", {
   textStyle: "$table-cell",
   color: "$text-heading",
   mt: "$x-small",
 })
 
-const MeterMaxValue = styled("div", {
+const ProgressBarMaxValue = styled("div", {
   textStyle: "$table-head",
   color: "$text-heading",
 })
 
-function Meter({ label, value, minValue = 0, maxValue, description }) {
+function ProgressBar({ label, value, minValue = 0, maxValue, description }) {
   const id = useId()
 
   const clipPathId = `clip-path-${id}`
@@ -66,7 +67,7 @@ function Meter({ label, value, minValue = 0, maxValue, description }) {
 
   const descriptionId = description != null ? `description-${id}` : undefined
 
-  let { meterProps, labelProps } = useMeter({
+  let { progressBarProps, labelProps } = useProgressBar({
     id,
     label,
     value,
@@ -82,14 +83,14 @@ function Meter({ label, value, minValue = 0, maxValue, description }) {
   const formatter = useNumberFormatter(formatOptions)
 
   return (
-    <MeterContainer>
-      <MeterInfo>
-        <MeterLabel {...labelProps}>{label}</MeterLabel>
-        <MeterMaxValue>{formatter.format(maxValue)}</MeterMaxValue>
-      </MeterInfo>
-      <MeterProgressBar {...meterProps}>
-        <MeterProgressBarFill>
-          <MeterProgressBarSvg>
+    <ProgressBarContainer>
+      <ProgressBarInfo>
+        <ProgressBarLabel {...labelProps}>{label}</ProgressBarLabel>
+        <ProgressBarMaxValue>{formatter.format(maxValue)}</ProgressBarMaxValue>
+      </ProgressBarInfo>
+      <ProgressBarTrack {...progressBarProps}>
+        <ProgressBarFill>
+          <ProgressBarSvgFill>
             <defs>
               <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop
@@ -119,12 +120,12 @@ function Meter({ label, value, minValue = 0, maxValue, description }) {
               fill={`url(#${gradientId})`}
               clipPath={`url(#${clipPathId})`}
             />
-          </MeterProgressBarSvg>
-        </MeterProgressBarFill>
-      </MeterProgressBar>
-      <MeterDescription id={descriptionId}>{description}</MeterDescription>
-    </MeterContainer>
+          </ProgressBarSvgFill>
+        </ProgressBarFill>
+      </ProgressBarTrack>
+      <ProgressBarDescription id={descriptionId}>{description}</ProgressBarDescription>
+    </ProgressBarContainer>
   )
 }
 
-export default Meter
+export default ProgressBar

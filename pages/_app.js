@@ -6,6 +6,7 @@ const globalStyles = globalCss({
   html: {
     height: "100%",
     width: "100%",
+    "fontSize": "17px",
 
     "@bp1": {
       fontSize: "20px",

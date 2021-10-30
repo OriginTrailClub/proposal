@@ -31,9 +31,7 @@ function Video() {
     <VideoContainer>
       <VideoWrapper>
         <VideoIframe
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/x2JGAfoa3wM?controls=0"
+          src="https://www.youtube-nocookie.com/embed/x2JGAfoa3wM"
           title="OriginTrail Community Hub Release Video"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

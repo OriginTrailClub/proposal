@@ -41,6 +41,7 @@ function Avatar(props) {
     alt = '',
     src,
     size,
+    srcSet,
     ...otherProps
   } = props;
 
@@ -48,7 +49,7 @@ function Avatar(props) {
 
   return (
     <AvatarImageWrapper size={size}>
-      <AvatarImage {...domProps} layout='fill' size={size} src={src} alt={alt} />
+      <AvatarImage {...domProps} srcSet={srcSet} layout='fill' size={size} src={src} alt={alt} />
     </AvatarImageWrapper>
   )
 }

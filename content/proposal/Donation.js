@@ -144,7 +144,7 @@ function Donation({ title, description, address, qr }) {
         </DonationAddress>
       </DonationMeta>
       <DonationQRWrapper>
-        <img src={qr} alt={title} layout='fill'  />
+        <img width={96} height={96} src={qr.src} srcSet={qr.srcSet} alt={title}  />
       </DonationQRWrapper>
     </DonationContainer>
   )

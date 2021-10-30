@@ -14,22 +14,22 @@ import Placeholder from "./Placeholder";
 import MultiSigner from "./MultiSigner";
 import Video from './Video';
 
-import ethAdressPlaceholder1 from 'static/images/eth-addresses/1.png?size=19'
-import ethAdressPlaceholder2 from 'static/images/eth-addresses/2.png?size=19'
-import ethAdressPlaceholder3 from 'static/images/eth-addresses/3.png?size=19'
-import ethAdressPlaceholder4 from 'static/images/eth-addresses/4.png?size=19'
+import ethAdressPlaceholder1 from 'static/images/eth-addresses/1.png?resize&sizes[]=19&sizes[]=38&sizes[]=57'
+import ethAdressPlaceholder2 from 'static/images/eth-addresses/2.png?resize&sizes[]=19&sizes[]=38&sizes[]=57'
+import ethAdressPlaceholder3 from 'static/images/eth-addresses/3.png?resize&sizes[]=19&sizes[]=38&sizes[]=57'
+import ethAdressPlaceholder4 from 'static/images/eth-addresses/4.png?resize&sizes[]=19&sizes[]=38&sizes[]=57'
 
-import tomOostewechelAvatar from 'static/images/avatars/tom-oostewechel@3x.jpg?size=48'
-import jacoBovenschenAvatar from 'static/images/avatars/jaco-bovenschen@3x.jpg?size=48'
-import kirkAvatar from 'static/images/avatars/kirk@3x.jpg?size=48'
-import amosThomasAvatar from 'static/images/avatars/amos-thomas@3x.jpg?size=48'
-import luKuAvatar from 'static/images/avatars/lu-ku@3x.jpg?size=48'
-import illustratorAvatar from 'static/images/avatars/illustrator@3x.jpg?size=48'
+import tomOostewechelAvatar from 'static/images/avatars/tom-oostewechel@3x.jpg?resize&sizes[]=48&sizes[]=96&sizes[]=144'
+import jacoBovenschenAvatar from 'static/images/avatars/jaco-bovenschen@3x.jpg?resize&sizes[]=48&sizes[]=96&sizes[]=144'
+import kirkAvatar from 'static/images/avatars/kirk@3x.jpg?resize&sizes[]=48&sizes[]=96&sizes[]=144'
+import amosThomasAvatar from 'static/images/avatars/amos-thomas@3x.jpg?resize&sizes[]=48&sizes[]=96&sizes[]=144'
+import luKuAvatar from 'static/images/avatars/lu-ku@3x.jpg?resize&sizes[]=48&sizes[]=96&sizes[]=144'
+import illustratorAvatar from 'static/images/avatars/illustrator@3x.jpg?resize&sizes[]=48&sizes[]=96&sizes[]=144'
 
-import bscQR from 'static/images/qr-codes/bsc-safe-qr.jpg?size=96'
-import ethQR from 'static/images/qr-codes/Ethereum-safe-qr.jpg?size=96'
-import polygonQR from 'static/images/qr-codes/polygon-safe-qr.jpg?size=96'
-import xDaiQR from 'static/images/qr-codes/xdai-safe-qr.jpg?size=96'
+import bscQR from 'static/images/qr-codes/bsc-safe-qr.jpg?resize&sizes[]=96&sizes[]=192&sizes[]=288'
+import ethQR from 'static/images/qr-codes/Ethereum-safe-qr.jpg?resize&sizes[]=96&sizes[]=192&sizes[]=288'
+import polygonQR from 'static/images/qr-codes/polygon-safe-qr.jpg?resize&sizes[]=96&sizes[]=192&sizes[]=288'
+import xDaiQR from 'static/images/qr-codes/xdai-safe-qr.jpg?resize&sizes[]=96&sizes[]=192&sizes[]=288'
 
 
 # Community Hub Proposal
@@ -86,7 +86,7 @@ The project team will consist of the following members:
 
 <Grid>
   <Card>
-    <Card.Avatar src={tomOostewechelAvatar.src} />
+    <Card.Avatar src={tomOostewechelAvatar.src} srcSet={tomOostewechelAvatar.srcSet} />
     <Card.Name label="Tom Oostewechel" />
     <Card.Profession label="Project Management / Design" />
     <Card.Content>
@@ -103,7 +103,7 @@ The project team will consist of the following members:
     <Card.Flag emoji="🇳🇱" label="Netherlands" />
   </Card>
   <Card>
-    <Card.Avatar src={jacoBovenschenAvatar.src} />
+    <Card.Avatar src={jacoBovenschenAvatar.src} srcSet={jacoBovenschenAvatar.srcSet} />
     <Card.Name label="Jaco Bovenschen" />
     <Card.Profession label="Development" />
     <Card.Content>
@@ -120,7 +120,7 @@ The project team will consist of the following members:
     <Card.Flag emoji="🇳🇱" label="Netherlands" />
   </Card>
   <Card>
-    <Card.Avatar src={luKuAvatar.src} />
+    <Card.Avatar src={luKuAvatar.src} srcSet={luKuAvatar.srcSet} />
     <Card.Name label="Lu Ku" />
     <Card.Profession label="Freelance Animator" />
     <Card.Content>
@@ -133,7 +133,7 @@ The project team will consist of the following members:
     <Card.Flag emoji="🇩🇪" label="Germany" />
   </Card>
   <Card>
-    <Card.Avatar src={amosThomasAvatar.src} />
+    <Card.Avatar src={amosThomasAvatar.src} srcSet={amosThomasAvatar.srcSet} />
     <Card.Name label="Famous Amos" />
     <Card.Profession label="Advisor / Community" />
     <Card.Content>
@@ -157,7 +157,7 @@ The project team will consist of the following members:
     <Card.Flag emoji="🇺🇸" label="United States" />
   </Card>
   <Card>
-    <Card.Avatar src={kirkAvatar.src} />
+    <Card.Avatar src={kirkAvatar.src} srcSet={kirkAvatar.srcSet} />
     <Card.Name label="Kirk" />
     <Card.Profession label="Advisor / Community" />
     <Card.Content>
@@ -246,6 +246,7 @@ Intiallity, the multi-sign wallets will be managed by members from the Project O
           Avatar={
             <Avatar
               src={ethAdressPlaceholder1.src}
+              srcSet={ethAdressPlaceholder1.srcSet}
               size="small"
               alt="Eth address avatar"
             />
@@ -261,6 +262,7 @@ Intiallity, the multi-sign wallets will be managed by members from the Project O
           Avatar={
             <Avatar
               src={ethAdressPlaceholder2.src}
+              srcSet={ethAdressPlaceholder2.srcSet}
               size="small"
               alt="Eth address avatar"
             />
@@ -276,6 +278,7 @@ Intiallity, the multi-sign wallets will be managed by members from the Project O
           Avatar={
             <Avatar
               src={ethAdressPlaceholder3.src}
+              srcSet={ethAdressPlaceholder3.srcSet}
               size="small"
               alt="Eth address avatar"
             />
@@ -291,6 +294,7 @@ Intiallity, the multi-sign wallets will be managed by members from the Project O
           Avatar={
             <Avatar
               src={ethAdressPlaceholder4.src}
+              srcSet={ethAdressPlaceholder4.srcSet}
               size="small"
               alt="Eth address avatar"
             />
@@ -326,7 +330,7 @@ You can donate to the community proposal fund on the Ethereum, Polygon, xDai or 
   <Tabs.Panels>
     <Tabs.Panel key="ETH">
       <Donation
-        qr={ethQR.src}
+        qr={ethQR}
         title="Community Proposal Fund"
         description="Deposit funds by scanning the QR code or copying the address below. Only send Ether and assets to this address (e.g. ETH, ERC20, ERC721)"
         address="0xD69B2B7ef81e63177e5B8fA6705895CA88d17AfA"
@@ -334,7 +338,7 @@ You can donate to the community proposal fund on the Ethereum, Polygon, xDai or 
     </Tabs.Panel>
     <Tabs.Panel key="Polygon">
       <Donation
-        qr={polygonQR.src}
+        qr={polygonQR}
         title="Community Proposal Fund"
         description="Deposit funds by scanning the QR code or copying the address below. Only send Matic and assets to this address (e.g. ETH, ERC20, ERC721)"
         address="0x4ACC8D6FB978DB8F975e36e0614988D75bc54bF7"
@@ -342,7 +346,7 @@ You can donate to the community proposal fund on the Ethereum, Polygon, xDai or 
     </Tabs.Panel>
     <Tabs.Panel key="xDai">
       <Donation
-        qr={xDaiQR.src}
+        qr={xDaiQR}
         title="Community Proposal Fund"
         description="Deposit funds by scanning the QR code or copying the address below. Only send xDai and assets to this address (e.g. ETH, ERC20, ERC721)"
         address="0x9aE31f6f26b15622d66755c5C794f7daD16fd48F"
@@ -350,7 +354,7 @@ You can donate to the community proposal fund on the Ethereum, Polygon, xDai or 
     </Tabs.Panel>
     <Tabs.Panel key="BSC">
       <Donation
-        qr={bscQR.src}
+        qr={bscQR}
         title="Community Proposal Fund"
         description="Deposit funds by scanning the QR code or copying the address below. Only send Binance Coin and assets to this address (e.g. ETH, ERC20, ERC721)"
         address="0x92BDCA6c068b227BD989E475C95E0eCfa98Ddb3d"

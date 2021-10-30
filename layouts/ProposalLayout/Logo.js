@@ -1,8 +1,11 @@
 import * as React from "react"
 
 function Logo(props) {
+  // TODO ADD LOGO label
+
   return (
     <svg
+      aria-label="OriginTrail Logo"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 190 42"
       fill="none"

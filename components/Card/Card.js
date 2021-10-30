@@ -22,7 +22,7 @@ const CardContainer = styled("article", {
   borderColor: "$gray-200",
   borderStyle: "solid",
   flexDirection: "column",
-  gridTemplateRows: "1fr",
+  gridTemplateRows: "max-content 1fr max-content",
   gridGap: "$regular",
 });
 

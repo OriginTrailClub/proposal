@@ -15,22 +15,25 @@ const ButtonLabel = styled("span", {
   lineHeight: "$body-secondary",
   fontFamily: "$mono",
   fontWeight: "$bold",
-  padding: "$x-small",
+  p: '$x-small'
 });
 
+const ButtonIconWrapper = styled('span', {
+  p: '$x-small'
+})
+
 const ButtonIcon = styled("span", {
-  padding: "$x-small",
   color: "currentColor",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  width: "$lineHeights$body-secondary",
-  height: "$lineHeights$body-secondary",
+  width: "calc($fontSizes$body-secondary * $lineHeights$body-secondary)",
+  height: "calc($fontSizes$body-secondary * $lineHeights$body-secondary)"
 });
 
 const ButtonContainer = styled("button", {
   border: "none",
-  padding: "$small",
+  p: '$small',
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -106,7 +109,7 @@ const Button = React.forwardRef(function Button(props, ref) {
       ) : (
         <ButtonLabel>{label}</ButtonLabel>
       )}
-      {Icon ? <ButtonIcon as={Icon} /> : null}
+      {Icon ? <ButtonIconWrapper><ButtonIcon as={Icon} /></ButtonIconWrapper> : null}
     </ButtonContainer>
   );
 });

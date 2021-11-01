@@ -4,7 +4,7 @@ import Logo from "./Logo"
 
 const HeaderContainer = styled("div", {
   py: "$regular",
-  maxWidth: 1234,
+  maxWidth: 920,
   width: "100%",
 })
 

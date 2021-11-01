@@ -20,10 +20,12 @@ const MDXContentContainer = styled("section", {
     "content"
   `,
   gridGap: "$regular",
-  maxWidth: 1234,
+  maxWidth: 920,
+  width: '100%',
 
   "@bp3": {
-    gridGap: "$large",
+    gridRowGap: "$large",
+    gridColumnGap: "$x-large",
     gridTemplateAreas: `
       "title ."
       "content sidenav"

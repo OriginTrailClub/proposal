@@ -176,7 +176,7 @@ const FooterOriginTrailCommunityContent = styled("div", {
   justifyContent: "space-between",
   flexDirection: 'column',
   width: "100%",
-  maxWidth: 1234,
+  maxWidth: 920,
 
   '@bp1': {
     flexDirection: 'row',
@@ -213,7 +213,7 @@ const FooterProjectContainer = styled("footer", {
 const FooterProjectContent = styled("div", {
   display: "flex",
 
-  maxWidth: 1234,
+  maxWidth: 920,
   width: "100%",
 
   '@bp1': {

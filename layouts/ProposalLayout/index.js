@@ -18,7 +18,8 @@ const ProposalLayoutContainer = styled("div", {
   gridTemplateColumns: "1fr",
   width: "100%",
   height: "100%",
-  gap: "$large",  
+  gridGap: "$large",
+  alignContent: 'center',
 
   '@bp1': {
     gap: "$x-large",

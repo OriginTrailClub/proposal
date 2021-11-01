@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="description" content="The OriginTrail Community Hub is an accessible and open-source knowledge hub for and by the community. A place where Tracers can connect, collaborate, contribute and learn about all things OriginTrail" />
         <link rel="icon" href="/favicon-origintrail.ico" />
 
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@OriginTrailClub" />
         <meta name="twitter:title" content="Origintrail Community Hub" />
         <meta name="twitter:description" content="The OriginTrail Community Hub is an accessible and open-source knowledge hub for and by the community. A place where Tracers can connect, collaborate, contribute and learn about all things OriginTrail" />

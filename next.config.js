@@ -14,7 +14,7 @@ config = withMdx({
 })(config)
 
 config = withOptimizedImages(Object.assign(config, {
-  handleImages: ['jpeg', 'png',],
+  handleImages: ['jpeg', 'png', 'svg'],
 }))
 
 module.exports = config;

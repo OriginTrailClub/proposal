@@ -11,10 +11,9 @@ const HeaderContainer = styled("div", {
 const HeaderContent = styled("div", {
   display: "flex",
   flexDirection: "row",
-  maxHeight: 48,
   width: "100%",
   justifyContent: "space-between",
-  alignItems: "center",
+  alignItems: "flex-end",
 })
 
 const HeaderLogo = styled("div", {
@@ -23,9 +22,14 @@ const HeaderLogo = styled("div", {
   flexGrow: 0,
   flexShrink: 1,
   width: "100%",
-  maxWidth: 190,
-  height: 32,
+  maxWidth: 172,
+  height: 48,
   justifyContent: "stretch",
+
+  '@bp1': {
+    maxWidth: 194,
+    height: 54,  
+  }
 })
 
 const HeaderCta = styled('div', {

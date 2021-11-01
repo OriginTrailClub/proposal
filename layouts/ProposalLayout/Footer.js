@@ -34,7 +34,7 @@ const FooterOriginTrailCommunityInfoContent = styled("p", {
 const FooterOriginTrailCommunityInfoLogo = styled("div", {
   display: "inline-flex",
   height: "100%",
-  height: 32,
+  height: 42,
   width: "100%",
 });
 

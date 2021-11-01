@@ -18,12 +18,7 @@ const ProposalLayoutContainer = styled("div", {
   gridTemplateColumns: "1fr",
   width: "100%",
   height: "100%",
-  gridGap: "$large",
   alignContent: 'center',
-
-  '@bp1': {
-    gap: "$x-large",
-  }
 });
 
 const ProposalLayoutHeader = styled("div", {
@@ -41,7 +36,15 @@ const ProposalLayoutContent = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  px: "$regular"
+  px: "$regular",
+
+  pt: "$large",
+  pb: '$regular',
+
+  '@bp1': {
+    pt: "$x-large",
+    pb: '$large'
+  }
 });
 
 const ProposalLayoutFooter = styled("div", {

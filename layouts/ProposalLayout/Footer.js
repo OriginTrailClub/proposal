@@ -46,7 +46,7 @@ function FooterOriginTrailCommunityInfo() {
       </FooterOriginTrailCommunityInfoLogo>
       <FooterOriginTrailCommunityInfoContent>
         OriginTrail is powered by an amazing community and core developers,
-        Trace Lab
+        Trace Labs
       </FooterOriginTrailCommunityInfoContent>
     </FooterOriginTrailCommunityInfoContainer>
   );

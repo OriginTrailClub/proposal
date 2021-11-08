@@ -16,12 +16,12 @@ export default function Home() {
         <meta name="twitter:site" content="@OriginTrailClub" />
         <meta name="twitter:title" content="Origintrail Community Hub" />
         <meta name="twitter:description" content="The OriginTrail Community Hub is an accessible and open-source knowledge hub for and by the community. A place where Tracers can connect, collaborate, contribute and learn about all things OriginTrail" />
-        <meta name="twitter:image" content="https://origintrailclub.onrender.com/socials/twitter/placeholder-twitter.jpg" />
+        <meta name="twitter:image" content="https://origintrail.club/socials/twitter/placeholder-twitter.jpg" />
         <meta name="twitter:image:alt" content="Origintrail Community Hub" />
 
         <meta property="og:title" content="Origintrail Community Hub" />
         <meta property="og:description" content="The OriginTrail Community Hub is an accessible and open-source knowledge hub for and by the community. A place where Tracers can connect, collaborate, contribute and learn about all things OriginTrail" />
-        <meta property="og:image" content="https://origintrailclub.onrender.com/socials/twitter/placeholder-twitter.jpg" />
+        <meta property="og:image" content="https://origintrail.club/socials/open-graph/placeholder-og.jpg" />
         <meta property="og:site_name" content="Origintrail Community Hub"/>
       </Head>
       <ProposalLayout>

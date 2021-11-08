@@ -36,7 +36,7 @@ const VideoIframe = styled("iframe", {
 const VideoPlayIcon = styled("div", {
   width: 48,
   height: 48,
-  color: "$indigo-600",
+  color: "$indigo-500",
 
   "@bp1": {
     width: 64,
@@ -53,6 +53,8 @@ const VideoPlaceholder = styled("div", {
   left: 0,
   width: "100%",
   height: "100%",
+  cursor: "pointer",
+  backgroundColor: '$indigo-50',
 
   "&:hover": {
     [VideoPlayIcon]: {
@@ -123,7 +125,6 @@ function Video({ placeholder, label, embedId }) {
         </VideoFrame>
         {isRequested ? null : (
           <VideoPlaceholder {...buttonProps} ref={placeholderRef}>
-            <VideoPlaceholderImage alt={label} src={placeholder} />
             <VisuallyHidden>Play video</VisuallyHidden>
             <VideoPlayIcon as={PlayCircleFillIcon} />
           </VideoPlaceholder>

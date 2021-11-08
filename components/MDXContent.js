@@ -41,6 +41,7 @@ const MDXContentSideNav = styled("aside", {
   flexShrink: 1,
   width: "100%",
   order: 1,
+  minWidth: 144,
 
   "@bp3": {
     display: "block",

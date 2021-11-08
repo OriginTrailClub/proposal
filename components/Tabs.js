@@ -19,12 +19,37 @@ const TabItemContainer = styled("li", {
   borderColor: "transparent",
   borderStyle: "solid",
   marginBottom: -2,
+  cursor: 'pointer',
+  "&:hover": {
+
+    color: "$text-body",
+    // backgroundColor: "$indigo-50",
+
+    "&:after": {
+      content: "",
+      position: "absolute",
+      bottom: -2,
+      left: -1,
+      right: -1,
+      height: 2,
+      backgroundColor: "$gray-200",
+    },
+  },
+
   variants: {
     selected: {
       true: {
         color: "$indigo-600",
         borderColor: "$indigo-100",
         backgroundColor: "$indigo-50",
+
+        "&:hover": {
+          color: "$indigo-600",
+          '&:after': {
+            backgroundColor: "$indigo-600",
+          }
+        },
+
         "&:after": {
           content: "",
           position: "absolute",
@@ -56,10 +81,10 @@ function TabItem({ item, state }) {
 }
 
 const TabListContainer = styled("div", {
-  overflowY: 'hidden',
-  overflowX: 'scoll',
+  overflowY: "hidden",
+  overflowX: "scoll",
   pb: 1,
-  mb: '$large'
+  mb: "$large",
 });
 
 const TabListContainerItems = styled("ul", {

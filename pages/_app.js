@@ -1,3 +1,4 @@
+import { I18nProvider } from "@react-aria/i18n";
 import { SSRProvider } from "@react-aria/ssr";
 
 import { globalCss } from "stitches.config";
@@ -35,9 +36,11 @@ function MyApp({ Component, pageProps }) {
   globalStyles();
 
   return (
-    <SSRProvider>
-      <Component {...pageProps} />
-    </SSRProvider>
+    <I18nProvider locale="en-US">
+      <SSRProvider>
+        <Component {...pageProps} />
+      </SSRProvider>
+    </I18nProvider>
   );
 }
 
